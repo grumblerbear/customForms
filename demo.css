@@ -1,0 +1,10 @@
+.wrapper-demo {
+	width: 300px;
+	margin: 100px auto;
+}
+.wrapper-demo label {
+	display: block;
+	margin: 10px;
+	font: 14px 'Myriad Pro',sans-serif;
+	line-height: 20px;
+}
