@@ -28,6 +28,13 @@
 							parent.addClass('text');
 							self.addClass('master');
 							break;
+						case 'file':
+							parent.addClass('file');
+							self.addClass('invisible');
+							parent.append('<div class="master">Выберите файл</div>');
+							parent.append('<div class="slave file"></div>');
+							parent.append('<div class="slave file-blocker"></div>');
+							break;
 
 					}
 				});
@@ -71,6 +78,16 @@
 					var parent = $(this).parent(customSelector);
 					parent.removeClass('active');
 				});
+
+			// Меняем имя в файл-фейке
+			if( $(this).is('[type=file]') ) {
+				var file = $(this).val();
+				if (file) {
+					parent.find('.master').text(file);
+				} else {
+					parent.find('.master').text('Выберите файл');
+				}
+			}
 
 			// Проставляем классы обновляемому элементу
 			if ($(this).is(':checked'))
