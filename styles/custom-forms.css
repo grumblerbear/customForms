@@ -1,41 +1,27 @@
-.custom-forms-wrapper.checkbox .input,
-.custom-forms-wrapper.radio .input {
-	opacity: 0;
-	filter: alpha(opacity=0);
-	width: 100%;
-	height: 100%;
-	display: inline-block;
-	margin: 0;
-}
-
 .custom-forms-wrapper {
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 0;
 }
 
-.custom-forms-wrapper .chzn-single div,
+/* slaves */
 .custom-forms-wrapper .slave {
 	display: inline-block;
-	border: 2px solid #ddd8ce;
+	border: none;
 	background-color: #ddd8ce;
 	vertical-align: top;
 }
-/*.custom-forms-wrapper:hover .chzn-single div,*/
 .custom-forms-wrapper:hover .slave {
-	border-color: #81acc0;
 	background-color: #81acc0;
 }
-/*.custom-forms-wrapper.focus .chzn-single div,*/
 .custom-forms-wrapper.focus .slave {
-	border-color: #1b7e5a;
 	background-color: #1b7e5a;
 }
-/*.custom-forms-wrapper.disable .chzn-single div,*/
 .custom-forms-wrapper.disable .slave {
-	border-color: rgba(255,0,0,0.3);
 	background-color: rgba(255,0,0,0.3);
 }
+
+/* slave поиск */
 .custom-forms-wrapper .search {
 	text-indent: -9999px;
 	width: 40px;
@@ -46,17 +32,34 @@
 	cursor: pointer;
 	padding: 0;
 }
+
+/* Селект chosen */
+.custom-forms-wrapper .chzn-single div {
+	display: inline-block;
+	border: none;
+	background-color: #ddd8ce;
+	vertical-align: top;
+}
 .custom-forms-wrapper .chzn-search {
-	display: none;
+	/*display: none;*/
+	margin: 0;
+	padding: 0;
 }
 .custom-forms-wrapper .chzn-search input {
-	min-width: 100%;
+	width: 100% !important;
+	background: #fff;
+	border: 2px solid #1b7e5a;
+	border-top: 0;
+	padding: 10px 10px 8px;
+	margin: 0;
+	height: 40px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	background-image: none !important;
 }
 .custom-forms-wrapper .chzn-drop,
 .custom-forms-wrapper .chzn-single {
-	min-width: 200px;
+	min-width: 211px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
@@ -67,16 +70,22 @@
 	height: auto;
 	border-radius: 0;
 	padding: 0;
-	/*position: relative;*/
-	/*overflow: visible;*/
 }
-.custom-forms-wrapper .chzn-single div {
-	width: 40px;
+.custom-forms-wrapper .chzn-single span {
+	background: none;
+	border: 2px solid #ddd8ce;
+	padding: 10px 10px 8px;
+	margin: 0;
 	height: 40px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	/*position: absolute;*/
-	/*right: -40px;*/
+
+}
+.custom-forms-wrapper .chzn-single div {
+	width: 42px;
+	height: 40px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	background-image: url(../images/icon/select.png);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -84,10 +93,20 @@
 }
 .custom-forms-wrapper .chzn-single div b {
 	background: none;
+	background-image: none !important;
 }
 
-.custom-forms-wrapper .chzn-drop,
-.custom-forms-wrapper .chzn-single-with-drop div {
+.custom-forms-wrapper:hover .chzn-single span {
+	border-color: #81acc0;
+}
+.custom-forms-wrapper:hover .chzn-single div {
+	background-color: #81acc0;
+}
+.custom-forms-wrapper .chzn-container-active .chzn-single span {
+	border-color: #1b7e5a;
+}
+.custom-forms-wrapper .chzn-container-active .chzn-drop,
+.custom-forms-wrapper .chzn-container-active .chzn-single div {
 	border: none;
 	background-color: #1b7e5a;
 	box-shadow: none;
@@ -107,16 +126,21 @@
 	color: #fff;
 	border-bottom: 1px solid rgba(255,255,255,0.5);
 }
+.custom-forms-wrapper .chzn-results li.no-results,
+.custom-forms-wrapper .chzn-results li.no-results:hover {
+	background: #1b7e5a;
+}
 .custom-forms-wrapper .chzn-results li:last-child {
 	border: none;
 }
 .custom-forms-wrapper .chzn-results li.result-selected,
+.custom-forms-wrapper .chzn-results li.highlighted,
 .custom-forms-wrapper .chzn-results li:hover {
 	background: #81acc0;
 }
 
-.custom-forms-wrapper .chzn-single span,
-.custom-forms-wrapper.text .input {
+
+.custom-forms-wrapper.text .master {
 	background: none;
 	border: 2px solid #ddd8ce;
 	padding: 10px 10px 8px;
@@ -125,21 +149,31 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
-.custom-forms-wrapper.text:hover .input {
+.custom-forms-wrapper.text:hover .master {
 	border-color: #81acc0;
 }
 .custom-forms-wrapper .chzn-single-with-drop span,
-.custom-forms-wrapper.text.focus .input {
+.custom-forms-wrapper.text.focus .master {
 	border-color: #1b7e5a;
 	color: #1b7e5a;
 }
-.custom-forms-wrapper.text.disable .input {
+.custom-forms-wrapper.text.disable .master {
 	border-color: rgba(255,0,0,0.3);
 	color: rgba(255,0,0,0.3);
 }
 
 
-/* Врапперы к инпутам */
+/* Скрываем чекбоксы и радиобаттоны */
+.custom-forms-wrapper.checkbox .master,
+.custom-forms-wrapper.radio .master {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	margin: 0;
+}
+/* Врапперы к чекбоксам и радиокнопкам */
 .custom-forms-wrapper.checkbox,
 .custom-forms-wrapper.radio {
 	background-repeat: no-repeat;

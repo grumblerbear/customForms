@@ -13,19 +13,20 @@
 
 				// Классы для оберток
 				inputs.each(function () {
-					var parent = $(this).parent(customSelector);
+					var self = $(this);
+					var parent = self.parent(customSelector);
 					switch( $(this).attr('type') ) {
 						case 'checkbox':
 							parent.addClass('checkbox');
-							$(this).addClass('input');
+							self.addClass('master');
 							break;
 						case 'radio':
 							parent.addClass('radio');
-							$(this).addClass('input');
+							self.addClass('master');
 							break;
 						case 'text':
 							parent.addClass('text');
-							$(this).addClass('input');
+							self.addClass('master');
 							break;
 
 					}

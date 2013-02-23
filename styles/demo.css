@@ -5,6 +5,11 @@
 	vertical-align: middle;
 	margin: 0 10px;
 }
+.demo .field label:first-child {
+	width: 60px;
+	display: inline-block;
+}
+.demo .chzn-search input,
 .demo .chzn-single span,
 .demo label,
 .demo input {
