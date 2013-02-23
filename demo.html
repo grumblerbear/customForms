@@ -47,6 +47,17 @@ $(function(){
 &lt;/div&gt;
 
 &lt;div class="field"&gt;
+	&lt;label for="s1"&gt;Тип&lt;/label&gt;
+	&lt;div class="custom-forms"&gt;
+		&lt;select id="s1" name="s1"&gt;
+			&lt;option&gt;Текстовое поле&lt;/option&gt;
+			&lt;option&gt;Чекбокс&lt;/option&gt;
+			&lt;option&gt;Радиокнопка&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="field"&gt;
 	&lt;label&gt;Поле 3&lt;/label&gt;
 	&lt;div class="custom-forms"&gt;
 		&lt;input type="text" placeholder="Найдите мне" id="i3"&gt;
@@ -105,13 +116,21 @@ $(function(){
 	vertical-align: middle;
 	margin: 0 10px;
 }
+.demo .field label:first-child {
+	width: 60px;
+	display: inline-block;
+}
+.demo .chzn-search input,
+.demo .chzn-single span,
 .demo label,
 .demo input {
 	font: 14px 'Myriad Pro',sans-serif;
 }</pre>
 			</div>
 			<div class="tab">
-				<pre>$('.custom-forms').customForms({});</pre>
+				<pre>
+$('.custom-forms').customForms({});
+$('.custom-forms select').chosen();</pre>
 			</div>
 			<div class="tab">
 				<div class="demo">
