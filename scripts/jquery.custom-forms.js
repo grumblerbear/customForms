@@ -82,6 +82,7 @@
 			// Меняем имя в файл-фейке
 			if( $(this).is('[type=file]') ) {
 				var file = $(this).val();
+				file = file.replace("C:\\fakepath\\","");
 				if (file) {
 					parent.find('.master').text(file);
 				} else {
