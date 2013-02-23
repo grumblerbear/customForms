@@ -6,17 +6,21 @@
 	<meta charset="utf-8">
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="scripts/jquery.hash-tabs.js"></script>
+	<script src="plugins/hashTabs/scripts/jquery.hash-tabs.js"></script>
+	<script src="plugins/chosen/scripts/chosen.jquery.min.js"></script>
 	<script src="scripts/jquery.custom-forms.js"></script>
 	<script>
 $(function(){
 	$('.wrapper-demo').hashTabs({});
+	$('.custom-forms select').chosen();
 	$('.custom-forms').customForms({});
 });
 	</script>
 
-	<link rel="stylesheet" href="css/demo.css">
-	<link rel="stylesheet" href="css/custom-forms.css">
+	<link rel="stylesheet" href="plugins/hashTabs/styles/demo.css">
+	<link rel="stylesheet" href="plugins/chosen/styles/chosen.css">
+	<link rel="stylesheet" href="styles/demo.css">
+	<link rel="stylesheet" href="styles/custom-forms.css">
 </head>
 <body>
 	<div class="wrapper-demo hash-tabs">
@@ -125,10 +129,20 @@ $(function(){
 					</div>
 
 					<div class="field">
-						<label>Поле 3</label>
+						<label for="i3">Поле 3</label>
 						<div class="custom-forms">
 							<input type="text" placeholder="Найдите мне" id="i3">
 							<input type="submit" value="Искать" class="slave search">
+						</div>
+					</div>
+
+					<div class="field">
+						<div class="custom-forms">
+							<select>
+								<option>Приложения</option>
+								<option>Настройки</option>
+								<option>Сообщения</option>
+							</select>
 						</div>
 					</div>
 

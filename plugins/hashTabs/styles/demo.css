@@ -1,15 +1,3 @@
-.demo .field {
-	margin: 10px 0;
-}
-.demo label {
-	vertical-align: middle;
-	margin: 0 10px;
-}
-.demo label,
-.demo input {
-	font: 14px 'Myriad Pro',sans-serif;
-}
-
 body {
 	background: #efebe4;
 }

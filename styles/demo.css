@@ -1,0 +1,12 @@
+.demo .field {
+	margin: 10px 0;
+}
+.demo label {
+	vertical-align: middle;
+	margin: 0 10px;
+}
+.demo .chzn-single span,
+.demo label,
+.demo input {
+	font: 14px 'Myriad Pro',sans-serif;
+}
