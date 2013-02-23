@@ -1,10 +1,62 @@
-.wrapper-demo {
-	width: 300px;
-	margin: 100px auto;
-}
-.wrapper-demo label {
+.demo label {
 	display: block;
 	margin: 10px;
 	font: 14px 'Myriad Pro',sans-serif;
-	line-height: 20px;
+	line-height: 22px;
+}
+
+body {
+	background: #efebe4;
+}
+
+.wrapper-demo .tab,
+.demo .tab {
+	display: none;
+}
+.wrapper-demo .tab.active,
+.demo .tab.active {
+	display: block;
+}
+
+.hash-tabs {
+	width: 600px;
+	margin: 50px auto;
+}
+.hash-tabs > .triggers {
+	font-size: 0;
+}
+.hash-tabs > .triggers .trigger {
+	display: inline-block;
+	vertical-align: bottom;
+	padding: 10px 30px 6px;
+
+	border-right: 1px solid #2e2e2e;
+
+	color: #fff;
+	font: 16px 'Myriad Pro',sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	background: #232323;
+}
+.hash-tabs > .triggers .trigger:last-child {
+	border-right: none;
+}
+.hash-tabs > .triggers .trigger.active {
+	padding: 12px 30px 8px;
+	border-right: none;
+	background: #265259;
+}
+.hash-tabs > .tabs {
+	border: 10px solid #265259;
+	background: #fff;
+	padding: 20px;
+	color: #000;
+	font: 14px 'Myriad Pro',sans-serif;
+}
+.hash-tabs .tab {
+}
+.hash-tabs .tab pre {
+	font: 12px 'Consolas',monospace;
+	margin: 0;
 }

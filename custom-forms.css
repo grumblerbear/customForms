@@ -10,8 +10,8 @@
 /* Врапперы к инпутам */
 .custom-forms-wrapper.checkbox, .custom-forms-wrapper.radio {
 	background-repeat:no-repeat;
-	width:20px;
-	height:20px;
+	width:22px;
+	height:22px;
 	display:inline-block;
 	vertical-align:middle;
 }
@@ -25,22 +25,29 @@
 /* Равноразмерные спрайты позволяют не разделять стили для типов */
 .custom-forms-wrapper:hover {
 	background-position:0 -20px;
+	background-position:0 -22px;
 }
 .custom-forms-wrapper.focus {
 	background-position:0 -40px;
+	background-position:0 -44px;
 }
 .custom-forms-wrapper.disable {
 	background-position:0 -60px;
+	background-position:0 -66px;
 }
 .custom-forms-wrapper.active {
 	background-position:0 -80px;
+	background-position:0 -88px;
 }
 .custom-forms-wrapper.active:hover {
 	background-position:0 -100px;
+	background-position:0 -110px;
 }
 .custom-forms-wrapper.active.focus {
 	background-position:0 -120px;
+	background-position:0 -132px;
 }
 .custom-forms-wrapper.active.disable {
 	background-position:0 -140px;
+	background-position:0 -154px;
 }

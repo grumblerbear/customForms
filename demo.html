@@ -6,9 +6,14 @@
 	<meta charset="utf-8">
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="jquery.hash-tabs.js"></script>
 	<script src="jquery.custom-forms.js"></script>
 	<script>
 $(function(){
+	$('.wrapper-demo').hashTabs({
+		selectorTriggers: '> .triggers > .trigger',
+		selectorTabs: '> .tabs > .tab'
+	});
 	$('.custom-forms').customForms({});
 });
 	</script>
@@ -17,49 +22,106 @@ $(function(){
 	<link rel="stylesheet" href="custom-forms.css">
 </head>
 <body>
-	<div class="wrapper-demo">
-		<label>
-			<div class="custom-forms">
-				<input type="checkbox">
+	<div class="wrapper-demo hash-tabs">
+		<nav class="triggers">
+			<a href="#html_box" class="trigger">Html</a>
+			<a href="#css_box" class="trigger">Css</a>
+			<a href="#js_box" class="trigger">Js</a>
+			<a href="#demo_box" class="trigger">Demo</a>
+		</nav>
+		<div class="tabs">
+			<div class="tab">
+				<pre>
+&lt;label&gt;
+	&lt;div class="custom-forms"&gt;
+		&lt;input type="checkbox"&gt;
+	&lt;/div&gt;
+	Чекбокс 1
+&lt;/label&gt;
+&lt;label&gt;
+	&lt;div class="custom-forms"&gt;
+		&lt;input type="checkbox" disabled&gt;
+	&lt;/div&gt;
+	Чекбокс 2 disabled
+&lt;/label&gt;
+&lt;label&gt;
+	&lt;div class="custom-forms"&gt;
+		&lt;input type="radio" name="r3"&gt;
+	&lt;/div&gt;
+	Радио 3.1
+&lt;/label&gt;
+&lt;label&gt;
+	&lt;div class="custom-forms"&gt;
+		&lt;input type="radio" name="r3" disabled checked&gt;
+	&lt;/div&gt;
+	Радио 3.2 disabled checked
+&lt;/label&gt;
+&lt;label&gt;
+	&lt;div class="custom-forms"&gt;
+		&lt;input type="radio" name="r3"&gt;
+	&lt;/div&gt;
+	Радио 3.3
+&lt;/label&gt;
+&lt;label&gt;
+	&lt;div class="custom-forms"&gt;
+		&lt;input type="checkbox" disabled checked&gt;
+	&lt;/div&gt;
+	Чекбокс 4 disabled checked
+&lt;/label&gt;</pre>
 			</div>
-			Чекбокс 1
-		</label>
-		<label>
-			<div class="custom-forms">
-				<input type="checkbox" disabled>
+			<div class="tab">
+				<pre>
+.demo label {
+	display: block;
+	margin: 10px;
+	font: 14px 'Myriad Pro',sans-serif;
+	line-height: 22px;
+}</pre>
 			</div>
-			Чекбокс 2 disabled
-		</label>
-		<label>
-			<div class="custom-forms">
-				<input type="radio" name="r3">
+			<div class="tab">
+				<pre>$('.custom-forms').customForms({});</pre>
 			</div>
-			Радио 3.1
-		</label>
-		<label>
-			<div class="custom-forms">
-				<input type="radio" name="r3" disabled checked>
+			<div class="tab">
+				<div class="demo">
+					<label>
+						<div class="custom-forms">
+							<input type="checkbox">
+						</div>
+						Чекбокс 1
+					</label>
+					<label>
+						<div class="custom-forms">
+							<input type="checkbox" disabled>
+						</div>
+						Чекбокс 2 disabled
+					</label>
+					<label>
+						<div class="custom-forms">
+							<input type="radio" name="r3">
+						</div>
+						Радио 3.1
+					</label>
+					<label>
+						<div class="custom-forms">
+							<input type="radio" name="r3" disabled checked>
+						</div>
+						Радио 3.2 disabled checked
+					</label>
+					<label>
+						<div class="custom-forms">
+							<input type="radio" name="r3">
+						</div>
+						Радио 3.3
+					</label>
+					<label>
+						<div class="custom-forms">
+							<input type="checkbox" disabled checked>
+						</div>
+						Чекбокс 4 disabled checked
+					</label>
+				</div>
 			</div>
-			Радио 3.2 disabled checked
-		</label>
-		<label>
-			<div class="custom-forms">
-				<input type="radio" name="r3">
-			</div>
-			Радио 3.3
-		</label>
-		<label>
-			<div class="custom-forms">
-				<input type="checkbox">
-			</div>
-			Чекбокс 4
-		</label>
-		<label>
-			<div class="custom-forms">
-				<input type="checkbox" disabled checked>
-			</div>
-			Чекбокс 5 disabled checked
-		</label>
+		</div>
 	</div>
 </body>
 </html>
