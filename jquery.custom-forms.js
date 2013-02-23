@@ -17,10 +17,17 @@
 					switch( $(this).attr('type') ) {
 						case 'checkbox':
 							parent.addClass('checkbox');
+							$(this).addClass('input');
 							break;
 						case 'radio':
 							parent.addClass('radio');
+							$(this).addClass('input');
 							break;
+						case 'text':
+							parent.addClass('text');
+							$(this).addClass('input');
+							break;
+
 					}
 				});
 

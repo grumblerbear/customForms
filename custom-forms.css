@@ -1,53 +1,102 @@
-.custom-forms-wrapper input  {
-	opacity:0;
+.custom-forms-wrapper.checkbox .input,
+.custom-forms-wrapper.radio .input {
+	opacity: 0;
 	filter: alpha(opacity=0);
-	width:100%;
-	height:100%;
-	display:inline-block;
-	margin:0;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	margin: 0;
 }
 
+.custom-forms-wrapper {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+.custom-forms-wrapper .slave {
+	border: 2px solid #ddd8ce;
+	background-color: #ddd8ce;
+}
+.custom-forms-wrapper:hover .slave {
+	border-color: #81acc0;
+	background-color: #81acc0;
+}
+.custom-forms-wrapper.focus .slave {
+	border-color: #1b7e5a;
+	background-color: #1b7e5a;
+}
+.custom-forms-wrapper.disable .slave {
+	border-color: rgba(255,0,0,0.3);
+	background-color: rgba(255,0,0,0.3);
+}
+.custom-forms-wrapper .search {
+	text-indent: -9999px;
+	width: 40px;
+	height: 40px;
+	background-image: url(images/icon/search.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.custom-forms-wrapper.text .input {
+	background: none;
+	border: 2px solid #ddd8ce;
+	padding: 10px 10px 8px;
+}
+.custom-forms-wrapper.text:hover .input {
+	border-color: #81acc0;
+}
+.custom-forms-wrapper.text.focus .input {
+	border-color: #1b7e5a;
+	color: #1b7e5a;
+}
+.custom-forms-wrapper.text.disable .input {
+	border-color: rgba(255,0,0,0.3);
+	color: rgba(255,0,0,0.3);
+}
+
+
 /* Врапперы к инпутам */
-.custom-forms-wrapper.checkbox, .custom-forms-wrapper.radio {
-	background-repeat:no-repeat;
-	width:22px;
-	height:22px;
-	display:inline-block;
-	vertical-align:middle;
+.custom-forms-wrapper.checkbox,
+.custom-forms-wrapper.radio {
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 22px;
 }
 .custom-forms-wrapper.checkbox {
-	background-image:url(sprite_checkbox.png);
+	background-image: url(sprite_checkbox.png);
 }
 .custom-forms-wrapper.radio {
-	background-image:url(sprite_radio.png);
+	background-image: url(sprite_radio.png);
 }
 
 /* Равноразмерные спрайты позволяют не разделять стили для типов */
 .custom-forms-wrapper:hover {
-	background-position:0 -20px;
-	background-position:0 -22px;
+	background-position: 0 -20px;
+	background-position: 0 -22px;
 }
 .custom-forms-wrapper.focus {
-	background-position:0 -40px;
-	background-position:0 -44px;
+	background-position: 0 -40px;
+	background-position: 0 -44px;
 }
 .custom-forms-wrapper.disable {
-	background-position:0 -60px;
-	background-position:0 -66px;
+	background-position: 0 -60px;
+	background-position: 0 -66px;
 }
 .custom-forms-wrapper.active {
-	background-position:0 -80px;
-	background-position:0 -88px;
+	background-position: 0 -80px;
+	background-position: 0 -88px;
 }
 .custom-forms-wrapper.active:hover {
-	background-position:0 -100px;
-	background-position:0 -110px;
+	background-position: 0 -100px;
+	background-position: 0 -110px;
 }
 .custom-forms-wrapper.active.focus {
-	background-position:0 -120px;
-	background-position:0 -132px;
+	background-position: 0 -120px;
+	background-position: 0 -132px;
 }
 .custom-forms-wrapper.active.disable {
-	background-position:0 -140px;
-	background-position:0 -154px;
+	background-position: 0 -140px;
+	background-position: 0 -154px;
 }

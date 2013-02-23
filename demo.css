@@ -1,8 +1,13 @@
+.demo .field {
+	margin: 10px 0;
+}
 .demo label {
-	display: block;
-	margin: 10px;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+.demo label,
+.demo input {
 	font: 14px 'Myriad Pro',sans-serif;
-	line-height: 22px;
 }
 
 body {
@@ -53,8 +58,6 @@ body {
 	padding: 20px;
 	color: #000;
 	font: 14px 'Myriad Pro',sans-serif;
-}
-.hash-tabs .tab {
 }
 .hash-tabs .tab pre {
 	font: 12px 'Consolas',monospace;
