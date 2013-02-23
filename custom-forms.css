@@ -15,8 +15,10 @@
 }
 
 .custom-forms-wrapper .slave {
+	display: inline-block;
 	border: 2px solid #ddd8ce;
 	background-color: #ddd8ce;
+	vertical-align: top;
 }
 .custom-forms-wrapper:hover .slave {
 	border-color: #81acc0;
@@ -38,11 +40,16 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	cursor: pointer;
+	padding: 0;
 }
 .custom-forms-wrapper.text .input {
 	background: none;
 	border: 2px solid #ddd8ce;
 	padding: 10px 10px 8px;
+	margin: 0;
+	height: 40px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 .custom-forms-wrapper.text:hover .input {
 	border-color: #81acc0;
