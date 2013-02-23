@@ -6,20 +6,17 @@
 	<meta charset="utf-8">
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="jquery.hash-tabs.js"></script>
-	<script src="jquery.custom-forms.js"></script>
+	<script src="scripts/jquery.hash-tabs.js"></script>
+	<script src="scripts/jquery.custom-forms.js"></script>
 	<script>
 $(function(){
-	$('.wrapper-demo').hashTabs({
-		selectorTriggers: '> .triggers > .trigger',
-		selectorTabs: '> .tabs > .tab'
-	});
+	$('.wrapper-demo').hashTabs({});
 	$('.custom-forms').customForms({});
 });
 	</script>
 
-	<link rel="stylesheet" href="demo.css">
-	<link rel="stylesheet" href="custom-forms.css">
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/custom-forms.css">
 </head>
 <body>
 	<div class="wrapper-demo hash-tabs">
@@ -34,65 +31,65 @@ $(function(){
 				<pre>
 &lt;div class="field"&gt;
 	&lt;div class="custom-forms"&gt;
-		&lt;input type="text" placeholder="Поле 1"&gt;
+		&lt;input type="text" placeholder="Поле 1" id="i1"&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="field"&gt;
-	&lt;label&gt;Поле 2&lt;/label&gt;
+	&lt;label for="i2"&gt;Поле 2&lt;/label&gt;
 	&lt;div class="custom-forms"&gt;
-		&lt;input type="text" disabled value="test value"&gt;
+		&lt;input type="text" disabled value="test value" id="i2"&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="field"&gt;
 	&lt;label&gt;Поле 3&lt;/label&gt;
 	&lt;div class="custom-forms"&gt;
-		&lt;input type="text"&gt;
+		&lt;input type="text" placeholder="Найдите мне" id="i3"&gt;
 		&lt;input type="submit" value="Искать" class="slave search"&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="field"&gt;
 	&lt;div class="custom-forms"&gt;
-		&lt;input type="checkbox"&gt;
+		&lt;input type="checkbox" id="c1"&gt;
 	&lt;/div&gt;
-	&lt;label&gt;Чекбокс 1&lt;/label&gt;
+	&lt;label for="c1"&gt;Чекбокс 1&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div class="field"&gt;
 	&lt;div class="custom-forms"&gt;
-		&lt;input type="checkbox" disabled&gt;
+		&lt;input type="checkbox" disabled id="c2"&gt;
 	&lt;/div&gt;
-	&lt;label&gt;Чекбокс 2 disabled&lt;/label&gt;
+	&lt;label for="c2"&gt;Чекбокс 2 disabled&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div class="field"&gt;
 	&lt;div class="custom-forms"&gt;
-		&lt;input type="checkbox" disabled checked&gt;
+		&lt;input type="checkbox" disabled checked id="c3"&gt;
 	&lt;/div&gt;
-	&lt;label&gt;Чекбокс 3 disabled checked&lt;/label&gt;
+	&lt;label for="c3"&gt;Чекбокс 3 disabled checked&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div class="field"&gt;
 	&lt;div class="custom-forms"&gt;
-		&lt;input type="radio" name="r3"&gt;
+		&lt;input type="radio" name="r1" id="r1"&gt;
 	&lt;/div&gt;
-	&lt;label&gt;Радио 1.1&lt;/label&gt;
+	&lt;label for="r1"&gt;Радио 1.1&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div class="field"&gt;
 	&lt;div class="custom-forms"&gt;
-		&lt;input type="radio" name="r3" disabled checked&gt;
+		&lt;input type="radio" name="r1" disabled checked id="r2"&gt;
 	&lt;/div&gt;
-	&lt;label&gt;Радио 1.2 disabled checked&lt;/label&gt;
+	&lt;label for="r2"&gt;Радио 1.2 disabled checked&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div class="field"&gt;
 	&lt;div class="custom-forms"&gt;
-		&lt;input type="radio" name="r3"&gt;
+		&lt;input type="radio" name="r1" id="r3"&gt;
 	&lt;/div&gt;
-	&lt;label&gt;Радио 1.3&lt;/label&gt;
+	&lt;label for="r3"&gt;Радио 1.3&lt;/label&gt;
 &lt;/div&gt;</pre>
 			</div>
 			<div class="tab">
@@ -176,7 +173,6 @@ $(function(){
 						</div>
 						<label for="r3">Радио 1.3</label>
 					</div>
-
 				</div>
 			</div>
 		</div>

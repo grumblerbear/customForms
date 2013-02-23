@@ -36,7 +36,7 @@
 	text-indent: -9999px;
 	width: 40px;
 	height: 40px;
-	background-image: url(images/icon/search.png);
+	background-image: url(../images/icon/search.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	cursor: pointer;
@@ -72,10 +72,10 @@
 	height: 22px;
 }
 .custom-forms-wrapper.checkbox {
-	background-image: url(sprite_checkbox.png);
+	background-image: url(../images/sprite_checkbox.png);
 }
 .custom-forms-wrapper.radio {
-	background-image: url(sprite_radio.png);
+	background-image: url(../images/sprite_radio.png);
 }
 
 /* Равноразмерные спрайты позволяют не разделять стили для типов */
